@@ -58,19 +58,4 @@ plt.ylabel('7-Day Average of New Cases')
 plt.savefig('us_7day_avg.png')
 plt.close()
 
-# Analysis 5: Case fatality rate (requires death data)
-death_df = pd.read_sql_table('covid19_deaths', engine)  # Assuming you have a deaths table
-merged_df = pd.merge(df, death_df, on=['Date', 'Country/Region'])
-merged_df['CFR'] = merged_df['Deaths'] / merged_df['Confirmed'] * 100
-
-plt.figure(figsize=(12, 6))
-merged_df[merged_df['Country/Region'] == 'US']['CFR'].plot(title='Case Fatality Rate in the US')
-plt.xlabel('Date')
-plt.ylabel('Case Fatality Rate (%)')
-plt.savefig('us_cfr.png')
-plt.close()
-
-# Analysis 6: Correlation between population density and case rate
-# This would require additional data on population and country area
-
 print("Analysis complete. Check the generated PNG files for visualizations.")
