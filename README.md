@@ -10,6 +10,10 @@ This project implements an ETL (Extract, Transform, Load) pipeline for COVID-19 
 - `.env`: Contains environment variables (not tracked by git)
 - `.env.example`: Example environment variable file
 
+## Project Samples
+![image](https://github.com/user-attachments/assets/2bf9ecfe-e336-427f-84a3-a9384a16f54e)
+![image](https://github.com/user-attachments/assets/afa21a39-9e0e-48a2-89bd-0c80c6e2b879)
+
 ## Prerequisites
 
 - Python 3.7+
